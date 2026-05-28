@@ -97,32 +97,67 @@
 // }
 
 
-class Voiture {
-    private :
-        string marque;
-        int annee;
-        int vitesse ;
+// class Voiture {
+//     private :
+//         string marque;
+//         int annee;
+//         int vitesse ;
 
-    public :
-        Voiture(string m, int a){
-            marque = m ;
-            annee = a ;
-            vitesse = 0 ;
+//     public :
+//         Voiture(string m, int a){
+//             marque = m ;
+//             annee = a ;
+//             vitesse = 0 ;
 
-        }
-        void acelerer(){
-            vitesse = vitesse + 20 ;
-        }
-        void afficher(){
-            cout << marque << " " << annee << " " << vitesse << endl;
-        }
+//         }
+//         void acelerer(){
+//             vitesse = vitesse + 20 ;
+//         }
+//         void afficher(){
+//             cout << marque << " " << annee << " " << vitesse << endl;
+//         }
 
 
-};
-int main(){
-    Voiture v1("Toyota", 2020);
-    v1.acelerer();
-    v1.afficher();
-}
+// };
+// int main(){
+//     Voiture v1("Toyota", 2020);
+//     v1.acelerer();
+//     v1.afficher();
+// }
 
    
+// class CompteBancaire 
+
+class CompteBancaire {
+    private : 
+        string titulaire ;
+        double solde;
+    public :
+        CompteBancaire(string t, double s){
+            titulaire = t ;
+            solde = s ;
+        }
+        void deposer(double n){
+            solde = solde + n ;
+        }
+        void retirer(double m){
+         solde = solde - m ;
+        }
+        void afficher(){
+            cout << "Titulaire : " << titulaire << endl;
+            cout << "Solde : " << solde << endl;
+        }
+};
+int main(){
+    cout << "Le solde initial : " << endl;
+    CompteBancaire c1("Ali", 1000);
+    c1.afficher();
+    cout << "Apres le depot de 500 : " << endl;
+    c1.deposer(500);
+    c1.afficher();
+    cout << "Apres le retrait de 200 : " << endl;
+    c1.retirer(200);
+    c1.afficher();
+    return 0 ;
+
+};
