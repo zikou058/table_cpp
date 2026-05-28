@@ -67,33 +67,62 @@
 // class Personne 
 
 
-// class with constructor : 
-class Personne {
+// // class with constructor : 
+// class Personne {
+//     private :
+//     string nom ;
+//     int age ;
+
+//     public :
+//     Personne(string n, int a){
+//         setNom(n) ;
+//         setAge(a) ;
+//     };
+//     void setNom(string n){
+//         nom = n ;
+//     };
+//     void setAge(int a){
+//         age = a ;
+//     };
+//     void afficher(){
+//         cout << "le nom est :" << nom << endl;
+//         cout << "L'age est :" << age << endl;
+//     }
+
+// };
+
+// int main(){
+//     Personne p1("ali", 20);
+//     p1.afficher();
+// }
+
+
+class Voiture {
     private :
-    string nom ;
-    int age ;
+        string marque;
+        int annee;
+        int vitesse ;
 
     public :
-    Personne(string n, int a){
-        setNom(n) ;
-        setAge(a) ;
-    };
-    void setNom(string n){
-        nom = n ;
-    };
-    void setAge(int a){
-        age = a ;
-    };
-    void afficher(){
-        cout << "le nom est :" << nom << endl;
-        cout << "L'age est :" << age << endl;
-    }
+        Voiture(string m, int a){
+            marque = m ;
+            annee = a ;
+            vitesse = 0 ;
+
+        }
+        void acelerer(){
+            vitesse = vitesse + 20 ;
+        }
+        void afficher(){
+            cout << marque << " " << annee << " " << vitesse << endl;
+        }
+
 
 };
-
 int main(){
-    Personne p1("ali", 20);
-    p1.afficher();
+    Voiture v1("Toyota", 2020);
+    v1.acelerer();
+    v1.afficher();
 }
 
    
