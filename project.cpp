@@ -128,36 +128,70 @@
    
 // class CompteBancaire 
 
-class CompteBancaire {
-    private : 
-        string titulaire ;
-        double solde;
-    public :
-        CompteBancaire(string t, double s){
-            titulaire = t ;
-            solde = s ;
-        }
-        void deposer(double n){
-            solde = solde + n ;
-        }
-        void retirer(double m){
-         solde = solde - m ;
-        }
-        void afficher(){
-            cout << "Titulaire : " << titulaire << endl;
-            cout << "Solde : " << solde << endl;
-        }
+// class CompteBancaire {
+//     private : 
+//         string titulaire ;
+//         double solde;
+//     public :
+//         CompteBancaire(string t, double s){
+//             titulaire = t ;
+//             solde = s ;
+//         }
+//         void deposer(double n){
+//             solde = solde + n ;
+//         }
+//         void retirer(double m){
+//          solde = solde - m ;
+//         }
+//         void afficher(){
+//             cout << "Titulaire : " << titulaire << endl;
+//             cout << "Solde : " << solde << endl;
+//         }
+// };
+// int main(){
+//     cout << "Le solde initial : " << endl;
+//     CompteBancaire c1("Ali", 1000);
+//     c1.afficher();
+//     cout << "Apres le depot de 500 : " << endl;
+//     c1.deposer(500);
+//     c1.afficher();
+//     cout << "Apres le retrait de 200 : " << endl;
+//     c1.retirer(200);
+//     c1.afficher();
+//     return 0 ;
+
+// };
+
+
+// Rectangle class with constructor and methods to calculate area and perimeter
+
+class Rectangle{
+    private :
+    double largeur ;
+    double hauteur ;
+
+    public : 
+    Rectangle(double l, double h){
+        largeur = l ;
+        hauteur = h ;
+    }
+    void suface(){
+        cout << "La surface du rectangle est : " << largeur * hauteur << endl;
+    }
+    void perimetre(){
+        cout << "Le perimetre du rectangle est : " << 2 * (largeur + hauteur) << endl;
+    }
+    void afficher(){
+        cout << "La largeur du rectangle est : " << largeur << endl;
+        cout << "La hauteur du rectangle est : " << hauteur << endl;
+    }
 };
 int main(){
-    cout << "Le solde initial : " << endl;
-    CompteBancaire c1("Ali", 1000);
-    c1.afficher();
-    cout << "Apres le depot de 500 : " << endl;
-    c1.deposer(500);
-    c1.afficher();
-    cout << "Apres le retrait de 200 : " << endl;
-    c1.retirer(200);
-    c1.afficher();
-    return 0 ;
-
+    Rectangle r2(5, 3);
+    cout << "La Surface : " << endl;
+    r2.suface();
+    cout << "Le Perimetre : " << endl;
+    r2.perimetre();
+    
+    return 0;
 };
