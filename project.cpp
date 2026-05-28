@@ -43,23 +43,57 @@
 // }
 
 
-class Etudiant {
-    public : 
-    int n ;
-    std::string nom ;
+// class Etudiant {
+//     public : 
+//     int n ;
+//     std::string nom ;
+
+//     public :
+
+//     void afficher(){
+//         cout << "Le nom de l'etudiant : " << nom << endl;
+//         cout << "Le nombre des etudiants : " << n << endl;
+//     }
+// };
+
+// int main() {
+//     Etudiant e;
+//     e.nom =  "ali";
+//     e.n =  1;
+//     e.afficher();
+// }
+
+
+// class Personne 
+
+
+// class with constructor : 
+class Personne {
+    private :
+    string nom ;
+    int age ;
 
     public :
-
+    Personne(string n, int a){
+        setNom(n) ;
+        setAge(a) ;
+    };
+    void setNom(string n){
+        nom = n ;
+    };
+    void setAge(int a){
+        age = a ;
+    };
     void afficher(){
-        cout << "Le nom de l'etudiant : " << nom << endl;
-        cout << "Le nombre des etudiants : " << n << endl;
+        cout << "le nom est :" << nom << endl;
+        cout << "L'age est :" << age << endl;
     }
+
 };
 
-int main() {
-    Etudiant e;
-    e.nom =  "ali";
-    e.n =  1;
-    e.afficher();
+int main(){
+    Personne p1("ali", 20);
+    p1.afficher();
 }
+
    
